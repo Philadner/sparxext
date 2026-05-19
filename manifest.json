@@ -1,0 +1,50 @@
+{
+  "manifest_version": 2,
+  "name": "Sparx Bookwork Code Detector",
+  "version": "1.0.0",
+  "description": "Detects visible Sparx Maths bookwork codes and keeps a local revision log.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "clipboardWrite",
+    "<all_urls>",
+    "https://*.sparxmaths.uk/*",
+    "https://*.sparx-learning.com/*",
+    "https://*.gauthmath.com/*",
+    "https://gauthmath.com/*",
+    "https://claude.ai/*",
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.sparxmaths.uk/*",
+        "https://*.sparx-learning.com/*"
+      ],
+      "js": [
+        "src/content.js"
+      ],
+      "css": [
+        "src/content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_action": {
+    "default_title": "Bookwork Codes",
+    "default_popup": "src/popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "sparx-bookwork-detector@example.local",
+      "strict_min_version": "109.0"
+    }
+  }
+}
