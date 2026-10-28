@@ -1,3 +1,4 @@
+// @ts-nocheck
 (function () {
   "use strict";
 
@@ -39,7 +40,8 @@
   }
 
   function getDisplayAnswer(entry) {
-    const answer = String(entry.selectedAnswer || "")
+    const structured = Array.isArray(entry.answers) ? entry.answers.map((answer) => answer.value).filter(Boolean).join("; ") : "";
+    const answer = String(structured || entry.selectedAnswer || "")
       .replace(/\d{1,3}(?:,\d{3})*\s+XP[\s\S]*$/i, "")
       .replace(/\s+Sparx Maths\s*$/i, "")
       .replace(/\s+/g, " ")
@@ -160,10 +162,12 @@
   exportButton.addEventListener("click", async () => {
     const history = await getHistory();
     const rows = [
-      ["code", "selected_answer", "detected_at", "question_context", "page_title", "url"].map(csvEscape).join(","),
+      ["code", "question_id", "selected_answer", "answer_source", "detected_at", "question_context", "page_title", "url"].map(csvEscape).join(","),
       ...history.map((entry) => [
         entry.code,
+        entry.questionId,
         getDisplayAnswer(entry),
+        entry.answerSource,
         entry.detectedAt,
         entry.questionContext,
         entry.pageTitle,

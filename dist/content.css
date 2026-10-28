@@ -1,0 +1,791 @@
+:root {
+  --user-select-accessibility-setting: text !important;
+}
+
+html,
+body,
+body * {
+  -moz-user-select: text !important;
+  user-select: text !important;
+}
+
+html.sparx-phi-theme {
+  --phi-black: #000000;
+  --phi-panel: #060606;
+  --phi-panel-2: #101010;
+  --phi-row: #151515;
+  --phi-border: #4a3a10;
+  --phi-gold: #d6b84d;
+  --phi-gold-bright: #ffe38a;
+  --phi-text: #f6f1df;
+  --phi-muted: #b9ae89;
+  --phi-glow: rgba(214, 184, 77, 0.36);
+  --colours-plain-background: var(--phi-black) !important;
+  --colours-regular-background: var(--phi-panel) !important;
+  --colours-dark-background: var(--phi-black) !important;
+  --colours-modal-background: var(--phi-panel) !important;
+  --colours-tooltip-background: var(--phi-panel-2) !important;
+  --colours-text-body: var(--phi-text) !important;
+  --colours-text-secondary: var(--phi-muted) !important;
+  --colours-text-body-inverted: var(--phi-black) !important;
+  --colours-interactable: var(--phi-gold) !important;
+  --colours-selected: var(--phi-gold-bright) !important;
+  --colours-border: var(--phi-border) !important;
+  --colours-complete: var(--phi-gold) !important;
+  --colours-complete-text: var(--phi-gold-bright) !important;
+  --colours-correct: var(--phi-gold-bright) !important;
+  --colours-progress-gradient-start: var(--phi-gold) !important;
+  --colours-progress-gradient-stop: var(--phi-gold-bright) !important;
+  --colours-correct-gradient-start: var(--phi-gold) !important;
+  --colours-correct-gradient-stop: var(--phi-gold-bright) !important;
+}
+
+html.sparx-phi-theme,
+html.sparx-phi-theme body,
+html.sparx-phi-theme #root,
+html.sparx-phi-theme body > div:first-child {
+  color: var(--phi-text) !important;
+  background-color: var(--phi-black) !important;
+}
+
+html.sparx-phi-theme body :where([class*="SMLogo"], [class*="Banner"], [class*="Nav"], [class*="Sidebar"], [class*="Menu"], [class*="Activity"], [class*="QuestionContainer"], [class*="QuestionScrollableContent"], [class*="QuestionWrapper"], [class*="QuestionInfo"], [class*="TaskItemsContainer"], [class*="TransitionPage"]) {
+  color: var(--phi-text) !important;
+  background-color: var(--phi-black) !important;
+}
+
+html.sparx-phi-theme body :where([class*="QuestionContainer"], [class*="QuestionScrollableContent"], [class*="QuestionWrapper"], [class*="Dialog"], [class*="Modal"], [class*="TooltipContent"]) {
+  border-color: var(--phi-border) !important;
+  box-shadow: 0 0 0 1px rgba(214, 184, 77, 0.1), 0 18px 42px rgba(0, 0, 0, 0.68) !important;
+}
+
+html.sparx-phi-theme body :where([class*="Background"], [class*="Hero"], [class*="Decoration"], [class*="Mascot"]):not([class*="Question"]):not([class*="Image"]):not([class*="Figure"]) {
+  background-image: none !important;
+}
+
+html.sparx-phi-theme body :where(a):not(#sparx-code-detector *) {
+  color: var(--phi-gold-bright) !important;
+  text-decoration-color: var(--phi-gold) !important;
+}
+
+html.sparx-phi-theme body :where(button, input, textarea, select):not(#sparx-code-detector):not(#sparx-code-detector *) {
+  color: var(--phi-text) !important;
+  background-color: var(--phi-panel) !important;
+  border-color: var(--phi-border) !important;
+}
+
+html.sparx-phi-theme body :where(button, [role="button"], a, input, textarea, select):not(#sparx-code-detector *):focus-visible {
+  outline: 2px solid var(--phi-gold-bright) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px var(--phi-glow) !important;
+}
+
+html.sparx-phi-theme body :where([class*="ButtonContained"], [class*="ButtonBlue"], [class*="ButtonDarkBlue"], a[href*="/task/"] button, a[href*="/item/"] button) {
+  color: var(--phi-black) !important;
+  background: linear-gradient(180deg, var(--phi-gold-bright), var(--phi-gold)) !important;
+  border-color: var(--phi-gold-bright) !important;
+}
+
+html.sparx-phi-theme body :where([class*="Chip"], [class*="Badge"], [class*="Tag"]) {
+  color: var(--phi-black) !important;
+  background: var(--phi-gold) !important;
+  border-color: var(--phi-gold-bright) !important;
+}
+
+html.sparx-phi-theme body :where([class*="TaskItemLink"]) {
+  color: var(--phi-muted) !important;
+  background: var(--phi-panel) !important;
+  border-color: var(--phi-border) !important;
+}
+
+html.sparx-phi-theme body :where([class*="TaskItemLink"][class*="Selected"], [class*="TaskItemLink"][class*="Correct"], [class*="TaskItemLink"]:hover) {
+  color: var(--phi-black) !important;
+  background: var(--phi-gold) !important;
+  border-color: var(--phi-gold-bright) !important;
+}
+
+html.sparx-phi-theme body :where(a[href*="/homework/"], a[href*="/task/"], a[href*="/item/"], [class*="Homework"], [class*="Accordion"], [class*="Package"]) {
+  color: var(--phi-text) !important;
+  background-color: var(--phi-panel) !important;
+  border-color: var(--phi-border) !important;
+}
+
+html.sparx-phi-theme body :where(a[href*="/homework/"] *, a[href*="/task/"] *, a[href*="/item/"] *) {
+  color: inherit !important;
+}
+
+html.sparx-phi-theme body :where(a[href*="/task/"]:hover, a[href*="/item/"]:hover, [class*="Homework"]:hover, [class*="Package"]:hover) {
+  background-color: var(--phi-row) !important;
+  border-color: var(--phi-gold) !important;
+}
+
+html.sparx-phi-theme body :where([class*="Question"]) {
+  --button-colour: var(--phi-gold) !important;
+  --correct-bg-colour: var(--phi-gold) !important;
+  --correct-icon-colour: var(--phi-black) !important;
+  --question-text-colour: var(--phi-text) !important;
+  --question-filter: none !important;
+}
+
+html.sparx-phi-theme body :where([class*="Option"]) {
+  color: var(--phi-text) !important;
+  background: var(--phi-panel) !important;
+  border-color: var(--phi-border) !important;
+}
+
+html.sparx-phi-theme body :where([class*="Option"][class*="Selected"], [class*="Option"]:hover) {
+  color: var(--phi-black) !important;
+  background: linear-gradient(180deg, var(--phi-gold-bright), var(--phi-gold)) !important;
+  border-color: var(--phi-gold-bright) !important;
+}
+
+html.sparx-phi-theme body :where(.katex, .katex *) {
+  color: inherit !important;
+}
+
+html.sparx-phi-theme body :where(input, textarea, select)::placeholder {
+  color: var(--phi-muted) !important;
+}
+
+html.sparx-phi-theme body :where(img, svg, canvas, video, [class*="Image"], [class*="Figure"]) {
+  background-color: transparent !important;
+}
+
+html.sparx-phi-theme body :where([class*="Background"] img, [class*="Hero"] img, [class*="Decoration"] img, [class*="Mascot"] img) {
+  opacity: 0.16 !important;
+  filter: grayscale(1) brightness(0.35) contrast(1.15) !important;
+}
+
+.sparx-phi-menu-button,
+.sparx-phi-menu,
+.sparx-phi-menu *,
+.sparx-phi-answer-modal,
+.sparx-phi-answer-modal *,
+#sparx-code-detector,
+#sparx-code-detector * {
+  box-sizing: border-box;
+}
+
+.sparx-phi-menu-button {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2147483645;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  color: #0f1014;
+  background: linear-gradient(180deg, #ffe38a, #d6b84d);
+  border: 1px solid #ffe9a6;
+  border-radius: 999px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.34), 0 0 0 5px rgba(214, 184, 77, 0.16);
+  cursor: pointer;
+  transition: transform 240ms cubic-bezier(0.33, 1, 0.68, 1), box-shadow 160ms ease;
+}
+
+.sparx-phi-menu-button__icon {
+  display: block;
+  width: 26px;
+  height: 30px;
+  fill: currentColor;
+}
+
+.sparx-phi-menu-button:hover,
+.sparx-phi-menu-button--open {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.42), 0 0 0 6px rgba(214, 184, 77, 0.22);
+}
+
+.sparx-phi-menu-button--capture-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.sparx-phi-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2147483644;
+  display: grid;
+  grid-template-columns: min(380px, 100vw);
+  grid-template-rows: 56px 1fr;
+  align-items: start;
+  width: min(380px, calc(100vw - 32px));
+  color: #f6f1df;
+  background: #050505;
+  border-right: 1px solid #4a3a10;
+  box-shadow: none;
+  font: 13px/1.45 Arial, Helvetica, sans-serif;
+  transform: translateX(calc(-100% - 18px));
+  pointer-events: none;
+  transition: width 280ms cubic-bezier(0.33, 1, 0.68, 1), transform 280ms cubic-bezier(0.33, 1, 0.68, 1), box-shadow 180ms ease;
+}
+
+.sparx-phi-menu--open {
+  transform: translateX(0);
+  box-shadow: 18px 0 48px rgba(0, 0, 0, 0.4);
+  pointer-events: auto;
+}
+
+.sparx-phi-menu--expanded {
+  grid-template-columns: min(380px, 34vw) 1fr;
+  width: 90vw;
+}
+
+.sparx-phi-menu--capture-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.sparx-phi-menu__header {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 56px;
+  padding: 0 14px;
+  color: #ffe38a;
+  background: #000000;
+  border-bottom: 1px solid #4a3a10;
+  font-size: 16px;
+}
+
+.sparx-phi-menu__header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sparx-phi-menu__help {
+  min-height: 32px;
+  padding: 0 12px;
+  color: #0f1014;
+  background: linear-gradient(180deg, #ffe38a, #d6b84d);
+  border: 1px solid #ffe9a6;
+  border-radius: 7px;
+  cursor: pointer;
+  font: 800 12px/1 Arial, Helvetica, sans-serif;
+}
+
+.sparx-phi-menu__help:hover {
+  filter: brightness(1.06);
+}
+
+.sparx-phi-menu__help:disabled {
+  cursor: wait;
+  opacity: 0.64;
+}
+
+.sparx-phi-menu__close,
+.sparx-phi-menu__preview-close,
+.sparx-phi-answer-modal__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: #b9ae89;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font: 20px/1 Arial, Helvetica, sans-serif;
+}
+
+.sparx-phi-menu__close:hover,
+.sparx-phi-menu__preview-close:hover,
+.sparx-phi-answer-modal__close:hover {
+  color: #ffe38a;
+  background: #101010;
+  border-color: #4a3a10;
+}
+
+.sparx-phi-menu__body {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: stretch;
+  height: calc(100% - 56px);
+  padding: 12px;
+  overflow: auto;
+}
+
+.sparx-phi-menu__help-status {
+  min-height: 16px;
+  margin: 0 0 8px;
+  color: #b9ae89;
+  font-size: 12px;
+}
+
+.sparx-phi-menu__settings {
+  margin-bottom: 12px;
+  padding: 10px;
+  color: #f6f1df;
+  background: #0c0c0c;
+  border: 1px solid #2f270f;
+  border-radius: 8px;
+}
+
+.sparx-phi-menu__settings summary {
+  color: #ffe38a;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.sparx-phi-menu__setting-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: #f6f1df;
+}
+
+.sparx-phi-menu__setting-row input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.sparx-phi-menu__setting-row select {
+  min-width: 112px;
+  min-height: 28px;
+  margin-left: auto;
+  color: #f6f1df;
+  background: #050505;
+  border: 1px solid #4a3a10;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.sparx-phi-menu__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.sparx-phi-menu__actions button {
+  min-height: 32px;
+  padding: 0 10px;
+  color: #0f1014;
+  background: linear-gradient(180deg, #ffe38a, #d6b84d);
+  border: 1px solid #ffe9a6;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.sparx-phi-menu__history {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sparx-phi-menu__item {
+  align-self: start;
+  height: 42px;
+  padding: 10px;
+  overflow: hidden;
+  color: #f6f1df;
+  background: #0c0c0c;
+  border: 1px solid #2f270f;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: height 240ms cubic-bezier(0.33, 1, 0.68, 1), background-color 160ms ease, border-color 160ms ease;
+}
+
+.sparx-phi-menu__item:hover,
+.sparx-phi-menu__item:focus-within {
+  height: 158px;
+  background: #111111;
+  border-color: #4a3a10;
+}
+
+.sparx-phi-menu__item--latest {
+  border-color: #4a3a10;
+  box-shadow: inset 3px 0 0 #d6b84d;
+}
+
+.sparx-phi-menu__item strong {
+  display: block;
+  color: #ffe38a;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.sparx-phi-menu__answer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 104px;
+  margin-top: 8px;
+  padding: 10px;
+  color: #2e384d;
+  background: #ffffff;
+  border: 1px solid #dfe6f3;
+  border-radius: 8px;
+  font: inherit;
+  line-height: 1.25;
+  text-align: left;
+  white-space: normal;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 170ms ease, transform 220ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.sparx-phi-menu__answer::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 22px;
+  pointer-events: none;
+  background: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
+}
+
+.sparx-phi-menu__item:hover .sparx-phi-menu__answer,
+.sparx-phi-menu__item:focus-within .sparx-phi-menu__answer {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.sparx-phi-menu__answer,
+.sparx-phi-menu__answer * {
+  max-width: 100%;
+}
+
+.sparx-phi-menu__answer [class*="AnswerPart"],
+.sparx-phi-menu__answer [class*="CardContent"],
+.sparx-phi-menu__answer [class*="TextFieldWrapper"] {
+  transform: none !important;
+}
+
+.sparx-phi-menu__answer input,
+.sparx-phi-menu__answer textarea,
+.sparx-phi-menu__answer select {
+  max-width: 100%;
+  color: #2e384d;
+}
+
+.sparx-phi-menu__empty {
+  margin: 24px 0;
+  color: #b9ae89;
+  text-align: center;
+}
+
+.sparx-phi-menu__preview {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  min-width: 0;
+  padding: 18px;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-18px);
+  transition: opacity 220ms ease, transform 280ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.sparx-phi-menu--expanded .sparx-phi-menu__preview {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.sparx-phi-menu__preview-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.sparx-phi-menu__preview-delete {
+  position: absolute;
+  top: 12px;
+  right: 54px;
+  min-height: 30px;
+  padding: 0 10px;
+  color: #ffe38a;
+  background: #15100a;
+  border: 1px solid #4a3a10;
+  border-radius: 7px;
+  cursor: pointer;
+  font: 700 12px/1 Arial, Helvetica, sans-serif;
+}
+
+.sparx-phi-menu__preview-delete:hover {
+  color: #0f1014;
+  background: #ffe38a;
+  border-color: #ffe9a6;
+}
+
+.sparx-phi-menu__preview-code {
+  display: block;
+  margin: 0 124px 12px 0;
+  color: #ffe38a;
+  font-size: 22px;
+}
+
+.sparx-phi-menu__preview-card {
+  height: calc(100vh - 84px);
+  padding: 28px;
+  overflow: hidden;
+  color: #2e384d;
+  background: #ffffff;
+  border: 1px solid #dfe6f3;
+  border-radius: 10px;
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.32);
+}
+
+.sparx-phi-menu__preview-body {
+  --sparx-phi-preview-scale: 1;
+  --sparx-phi-preview-height: auto;
+  height: var(--sparx-phi-preview-height);
+  color: #2e384d;
+  overflow: visible;
+  overflow-wrap: anywhere;
+  transform-origin: top left;
+}
+
+.sparx-phi-menu__preview-body,
+.sparx-phi-menu__preview-body * {
+  max-width: none;
+}
+
+.sparx-phi-menu__preview-fit {
+  display: inline-block;
+  min-width: 100%;
+  transform: scale(var(--sparx-phi-preview-scale));
+  transform-origin: top left;
+}
+
+.sparx-phi-menu__preview-body input,
+.sparx-phi-menu__preview-body textarea,
+.sparx-phi-menu__preview-body select {
+  color: #2e384d;
+  background: #ffffff;
+}
+
+.sparx-phi-menu__preview-fallback {
+  margin: 0;
+  color: #2e384d;
+  white-space: pre-wrap;
+}
+
+.sparx-phi-answer-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.38);
+  font: 14px/1.5 Arial, Helvetica, sans-serif;
+}
+
+.sparx-phi-answer-modal[hidden] {
+  display: none !important;
+}
+
+.sparx-phi-answer-modal__dialog {
+  position: relative;
+  width: min(620px, calc(100vw - 40px));
+  max-height: min(520px, calc(100vh - 40px));
+  padding: 18px;
+  overflow: auto;
+  color: #f6f1df;
+  background: #050505;
+  border: 1px solid #4a3a10;
+  border-radius: 10px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.58), 0 0 0 1px rgba(214, 184, 77, 0.18);
+}
+
+.sparx-phi-answer-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.sparx-phi-answer-modal__code {
+  display: block;
+  margin: 0 42px 10px 0;
+  color: #ffe38a;
+  font-size: 22px;
+}
+
+.sparx-phi-answer-modal__answer {
+  margin: 0;
+  color: #f6f1df;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+#sparx-code-detector {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2147483647;
+  width: 236px;
+  height: 112px;
+  color: #f7edc9;
+  font: 13px/1.35 Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  transform-origin: 23px calc(100% - 23px);
+}
+
+#sparx-code-detector[hidden] {
+  display: none !important;
+}
+
+#sparx-code-detector.sparx-code-detector--visible {
+  animation: sparx-code-bloom-in 360ms cubic-bezier(0.2, 0.9, 0.22, 1) both;
+}
+
+#sparx-code-detector.sparx-code-detector--dismissing {
+  animation: sparx-code-bloom-out 320ms cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.sparx-code-detector__surface {
+  position: relative;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  padding: 13px 15px 14px 13px;
+  overflow: hidden;
+  color: inherit;
+  background:
+    radial-gradient(circle at 16% 10%, rgba(255, 238, 168, 0.2), transparent 34%),
+    linear-gradient(145deg, #15130a, #050505 68%);
+  border: 1px solid rgba(255, 227, 138, 0.58);
+  border-radius: 24px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.46), 0 0 0 5px rgba(214, 184, 77, 0.14);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.sparx-code-detector__surface:hover {
+  border-color: #ffe38a;
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.52), 0 0 0 6px rgba(214, 184, 77, 0.2);
+}
+
+.sparx-code-detector__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  color: #0f1014;
+  background: linear-gradient(180deg, #ffe38a, #d6b84d);
+  border: 1px solid #fff0b8;
+  border-radius: 999px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.sparx-code-detector__icon {
+  display: block;
+  width: 24px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.sparx-code-detector__body {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 3px;
+}
+
+.sparx-code-detector__code {
+  display: block;
+  margin: 0 0 5px;
+  color: #ffe38a;
+  font: 800 22px/1.05 Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sparx-code-detector__meta {
+  display: block;
+  max-width: 150px;
+  color: #f7edc9;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.86;
+}
+
+.sparx-code-detector__progress {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffe38a, #d6b84d);
+  transform-origin: left center;
+}
+
+.sparx-code-detector--visible .sparx-code-detector__progress {
+  animation: sparx-code-progress 3000ms linear forwards;
+}
+
+@keyframes sparx-code-progress {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes sparx-code-bloom-in {
+  from {
+    opacity: 0;
+    clip-path: circle(23px at 23px calc(100% - 23px));
+    transform: scale(0.82);
+  }
+
+  55% {
+    opacity: 1;
+    clip-path: circle(120px at 23px calc(100% - 23px));
+    transform: scale(1.02);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 round 24px);
+    transform: scale(1);
+  }
+}
+
+@keyframes sparx-code-bloom-out {
+  from {
+    opacity: 1;
+    clip-path: inset(0 round 24px);
+    transform: translateY(0) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    clip-path: circle(23px at 23px calc(100% - 23px));
+    transform: translateY(10px) scale(0.86);
+  }
+}
+

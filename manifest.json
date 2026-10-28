@@ -19,7 +19,7 @@
   ],
   "background": {
     "scripts": [
-      "src/background.js"
+      "dist/background.js"
     ]
   },
   "content_scripts": [
@@ -29,17 +29,17 @@
         "https://*.sparx-learning.com/*"
       ],
       "js": [
-        "src/content.js"
+        "dist/content.js"
       ],
       "css": [
-        "src/content.css"
+        "dist/content.css"
       ],
-      "run_at": "document_idle"
+      "run_at": "document_start"
     }
   ],
   "browser_action": {
     "default_title": "Bookwork Codes",
-    "default_popup": "src/popup.html"
+    "default_popup": "dist/popup.html"
   },
   "browser_specific_settings": {
     "gecko": {

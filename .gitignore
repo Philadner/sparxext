@@ -1,5 +1,14 @@
 node_modules/
+dist/
 .DS_Store
 Thumbs.db
 *.log
 web-ext-artifacts/
+
+# Rebuildable files omitted by the storage archive
+node_modules/
+.venv*/
+venv/
+__pycache__/
+.next/
+.uv-cache/
